@@ -1,0 +1,24 @@
+
+<!-- 
+Hello
+<nav>
+
+   <a routerLink="/coursedetails">Java </a>
+   <a routerLink="/coursedetails">Angular </a>
+
+</nav>
+==================================================
+
+<nav>
+   <ul>
+     <li><a routerLink="/coursedetails" routerLinkActive="active">Java</a></li>
+     <li><a routerLink="/coursedetails" routerLinkActive="active">Angula</a></li>
+   </ul>
+ </nav> -->
+
+
+ <a *ngFor="let course of courselist"
+  [routerLink]="['/coursedetails', course.id]">
+  {{course.id}}  {{ course.name }}
+</a>
+

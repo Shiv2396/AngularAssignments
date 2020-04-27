@@ -1,5 +1,3 @@
-<p>login works!</p>
-
 
 <mat-card>
     <mat-card-title>Login</mat-card-title>
@@ -7,28 +5,28 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <p>
     <mat-form-field>
-      <input type="text" matInput placeholder="Username" formControlName="username">
+      <input type="text" matInput placeholder="Username" name="username" [(ngModel)]="username" formControlName="username">
     </mat-form-field>
   </p>
 
   <p>
     <mat-form-field>
-      <input type="password" matInput placeholder="Password" formControlName="password">
+      <input type="password" matInput placeholder="Password" name="password" [(ngModel)]="password" formControlName="password">
     </mat-form-field>
   </p>
 
-  <p *ngIf="error" class="error">
-    {{ error }}
+  <p *ngIf="iserror" class="error">
+    {{ errormessage }}
   </p>
 
   <div class="button">
     <button mat-raised-button type="submit" color="primary" mat-button>Login</button>
   </div>
-
+<div class="button">
   <mat-card-actions>
-    <button mat-raised-button (click)="register()" color="primary">Register</button>
+    <button mat-raised-button (click)="register()" color="primary" mat-button>Register</button>
   </mat-card-actions>
-
+</div>
 </form>
 </mat-card-content>
 </mat-card>
