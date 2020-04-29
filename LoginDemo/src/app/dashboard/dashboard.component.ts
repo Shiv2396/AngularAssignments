@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  username: string;
+  private sub: any;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+    this.sub = this.route.params.subscribe(params => {
+      this.username = params['username']; // (+) converts string 'id' to a number
+
+      // In a real app: dispatch action to load the details here.
+   });
   }
 
 }

@@ -23,8 +23,8 @@ export class CourselistComponent implements OnInit {
   //   this.router.navigate(['sim']);
   // }
 
-  goToProductDetails(id) {
-    this.router.navigate(['/coursedetails', id]);
-  }
+  // goToProductDetails(id) {
+  //   this.router.navigate(['/coursedetails', id]);
+  // }
 
 }

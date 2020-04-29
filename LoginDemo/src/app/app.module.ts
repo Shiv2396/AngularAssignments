@@ -14,6 +14,7 @@ import { CourselistComponent } from './courselist/courselist.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import { MatListModule } from '@angular/material';
 import { RegisterReactiveFormComponent } from './register-reactive-form/register-reactive-form.component';
+import { CardlayoutComponent } from './cardlayout/cardlayout.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RegisterReactiveFormComponent } from './register-reactive-form/register
     DashboardComponent,
     CourselistComponent,
     CoursedetailsComponent,
-    RegisterReactiveFormComponent
+    RegisterReactiveFormComponent,
+    CardlayoutComponent
   ],
   imports: [
     BrowserModule,

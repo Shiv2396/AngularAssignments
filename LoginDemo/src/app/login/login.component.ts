@@ -8,15 +8,15 @@ import { Router} from '@angular//router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent //implements OnInit {
+export class LoginComponent // implements OnInit {
 {
 
   [x: string]: any;
-  username : String;
-  password : String;
-  errormessage : String = "Wrong credential";
-  iserror : boolean = false;
-  
+  username: string;
+  password: string;
+  errormessage= 'Wrong credential';
+  iserror = false;
+
 
   form: FormGroup = new FormGroup({
     username: new FormControl('ss'),
@@ -30,22 +30,20 @@ export class LoginComponent //implements OnInit {
 
   register()
   {
-    this.router.navigate(["/register"]);
+    this.router.navigate(['/register']);
   }
 
   submit() { 
-    console.log("ss  "+this.username);    
+    console.log('ss  ' + this.username);    
 
-    if(this.username == "admin" && this.password == "admin")
+    if (this.username === 'admin' && this.password === 'admin')
     {
       this.iserror = false;
-      this.router.navigate(["/dashboard"]);
+      this.router.navigate(['/dashboard', this.username]);
     }
     else{
       this.iserror = true;
-      //console.log("Wrong credentials")
+      // console.log("Wrong credentials")
     }
-   
   }
-
 }
